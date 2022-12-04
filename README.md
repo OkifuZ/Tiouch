@@ -110,9 +110,3 @@ https://user-images.githubusercontent.com/6712304/205472730-f4fe9f03-d648-491d-b
 * 提高性能
   * 提高场景性能和力触觉渲染的性能
   * 优化碰撞检测和碰撞处理
-
-## 其他：
-
-### 第三方Unity插件依赖
-
-
