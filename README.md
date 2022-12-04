@@ -12,12 +12,18 @@ Taichi 语言已经实现了很多物理仿真场景，在视觉上看起来很�
 
 
 ---
-
+## 项目依赖
+- [3D Systems OpenHaptics Unity Plugin](https://assetstore.unity.com/packages/tools/integration/3d-systems-openhaptics-unity-plugin-134024)
+- [Taichi V1.3.0](https://github.com/taichi-dev/taichi/releases/tag/v1.3.0)
+- Unity (2022.3.14及以上)
+- Taichi C API
+- [Taichi Unity Plugin](https://github.com/taichi-dev/taichi-unity2)
+- Python (3.7版本以上)
 ## 项目构建
-
-本项目Python端代码（生成AOT）使用Taichi版本为1.3.0 `[Taichi] version 1.3.0, llvm 15.0.1, commit b218fb5b, win, python 3.10.7`.
-
-本项目基于Unity实现，依赖Taichi-Unity Plugin与OpenHaptics Plugin。其中OpenHaptics Plugin可在Unity Asset Store免费获取，Taichi-Unity Plugin的使用请参见[官方示例文档](https://github.com/taichi-dev/Taichi-UnityExample)，若遇到Taichi版本问题导致的运行错误，请参考[常见问题](https://github.com/taichi-dev/Taichi-UnityExample/blob/main/Build.md)解答，重新[编译plugin](https://github.com/taichi-dev/taichi-unity2)。若需要编译taichi c-api，请参考[这篇教程](https://rainvector.notion.site/Windows-Build-Taichi-From-Source-c6acd5f81f8b4075861a64967085ac4c)。
+1. 在Windows上从源文件编译Taichi，需要Vulkan环境，设置编译选项 `-DTI_WITH_C_API=ON`，具体可参考[这篇教程](https://rainvector.notion.site/Windows-Build-Taichi-From-Source-c6acd5f81f8b4075861a64967085ac4c)，得到`taichi_c_api.dll`。
+2. 编译[Taichi Unity Plugin](https://github.com/taichi-dev/taichi-unity2)，得到`taichi_unity.dll`。
+3. 将`taichi_c_api.dll`和`taichi_unity.dll`复制到 `aseets/plugins/`文件夹下。
+4. 在Unity中打开工程文件并运行场景
 
 目前Asset目录下已包含所有插件dll与资产。
 
@@ -25,7 +31,7 @@ Taichi 语言已经实现了很多物理仿真场景，在视觉上看起来很�
 
 ## Inspiration
 
-在米开朗基罗的《创造亚当》中，上帝与亚当即将碰触的指尖，喻示着人类将获得感受万物的六感之一——**触觉**。
+在米开朗基罗的《创造亚当》中，上帝与亚当即将碰触的指尖，喻示着人类将获得感受万物的五感之一——**触觉**。
 
 ![1670065131455](image/Readme/1670065131455.png)
 
@@ -109,4 +115,4 @@ https://user-images.githubusercontent.com/6712304/205472730-f4fe9f03-d648-491d-b
 
 ### 第三方Unity插件依赖
 
-- [3D Systems Openhaptics Unity Plugin](https://assetstore.unity.com/packages/tools/integration/3d-systems-openhaptics-unity-plugin-134024)
+
