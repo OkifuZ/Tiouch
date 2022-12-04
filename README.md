@@ -63,7 +63,7 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 
 ### 物理模拟部分：
 
-使用Taichi实现核心物理模拟算法。考虑到Python运行时性能以及与力反馈设备开发的对接，我们组尝试发掘Taichi AoT功能；考虑到开发简易性和渲染效果，我们组使用Unity引擎实现图形程序框架。
+使用Taichi实现核心物理模拟算法，场景中的柔体使用shape matching约束和position based dynamics(PBD)进行建模。考虑到Python运行时性能以及与力反馈设备开发的对接，我们组尝试发掘Taichi AoT功能；考虑到开发简易性和渲染效果，我们组使用Unity引擎实现图形程序框架。
 
 尽管Taichi C API、 AoT以及Unity Plugin还属于热开发阶段，得益于[taichi-aot-demo](https://github.com/taichi-dev/taichi-aot-demo)和[Taichi-Unity Example](https://github.com/taichi-dev/Taichi-UnityExample)等样例以及开发人员的帮助，我们完成了Taichi kernel在Unity中的加载与运行。
 
