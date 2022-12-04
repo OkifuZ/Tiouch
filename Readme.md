@@ -24,11 +24,11 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 
 ![1670065153065](image/Readme/1670065153065.png)
 
-## Pipline
+## Pipeline
 
 我们通过**AOT**将Taichi的kernel部署到Unity当中，在Unity中基于Taichi C API和Taichi Unity Plugin构建Taichi runtime，这样就可以在Unity里启用我们的kernel运行啦。再通过Haptics Unity Plugin，用户就可以使用Haptics力反馈设备进行触觉的交互辣。
 
-![1670065146056](image/Readme/1670065146056.png)
+![1670065146056](image/pipline.png)
 
 ## Timeline
 
