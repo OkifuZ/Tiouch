@@ -12,7 +12,15 @@ Taichi 语言已经实现了很多物理仿真场景，在视觉上看起来很�
 
 ---
 
+## 项目构建
 
+本项目Python端代码（生成AOT）使用Taichi版本为1.3.0 `[Taichi] version 1.3.0, llvm 15.0.1, commit b218fb5b, win, python 3.10.7`.
+
+本项目基于Unity实现，依赖Taichi-Unity Plugin与OpenHaptics Plugin。其中OpenHaptics Plugin可在Unity Asset Store免费获取，Taichi-Unity Plugin的使用请参见[官方示例文档](https://github.com/taichi-dev/Taichi-UnityExample)，若遇到Taichi版本问题导致的运行错误，请参考[常见问题](https://github.com/taichi-dev/Taichi-UnityExample/blob/main/Build.md)解答，重新[编译plugin](https://github.com/taichi-dev/taichi-unity2)。若需要编译taichi c-api，请参考[这篇教程](https://rainvector.notion.site/Windows-Build-Taichi-From-Source-c6acd5f81f8b4075861a64967085ac4c)。
+
+目前Asset目录下已包含所有插件dll与资产。
+
+---
 
 ## Inspiration
 
@@ -66,6 +74,10 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 ## 期望效果：
 
 ![1670064932882](image/Readme/1670064932882.png)
+
+## 实际效果
+
+result.mp4
 
 ## Future Work
 
