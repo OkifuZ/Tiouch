@@ -29,7 +29,7 @@ Taichi 语言已经实现了很多物理仿真场景，在视觉上看起来很�
 
 ---
 
-## Inspiration
+## 灵感来源
 
 在米开朗基罗的《创造亚当》中，上帝与亚当即将碰触的指尖，喻示着人类将获得感受万物的五感之一——**触觉**。
 
@@ -41,13 +41,13 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 <img src="image/combination.png"  width="400px">
 </p>
 
-## Pipeline
+## 工程框架
 
 我们通过**AOT**将Taichi的kernel部署到Unity当中，在Unity中基于Taichi C API和Taichi Unity Plugin构建Taichi runtime，这样就可以在Unity里启用我们的kernel运行啦。再通过Haptics Unity Plugin，用户就可以使用Haptics力反馈设备进行触觉的交互辣。
 
 ![1670065146056](image/pipline.png)
 
-## Timeline
+## 实现时间线
 
 * 前期准备
   * Taichi编译、C API、Unity Example
@@ -57,7 +57,7 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 * Taichi编写物理场景(11.30-12.1)
   * 实现Rigid cubes
 * Unity场景中加入Taichi rigid cubes (12.2)
-* Unity加入交互 (12.3)
+* Unity加入交互 (12.3-12.4)
 
 ## 实现思路：
 
@@ -75,7 +75,7 @@ Taichi的高性能物理仿真，创造了丰富的视觉盛宴，但我们想�
 
 尽管能摸到物体是一个很美好的设想，但我们没有力反馈手套那样炫酷的设备。取而代之的是3D Systems公司开发的[Touch Haptic Device](https://www.3dsystems.com/haptics-devices/touch)，Touch是一款6自由度的力反馈笔：“可在用户的手上施加力反馈，使他们能够感受虚拟对象并在用户操作屏幕上的 3D 对象时产生逼真的触感”。在力触觉渲染中，用户可以可以操作力反馈设备，控制力反馈设备在虚拟场景中的镜像物体，比如手术钳，笔等。镜像物体作为刚体与虚拟场景中其他物体交互产生交互力，通过力反馈接口设置反馈力，从而实现力触觉渲染。考虑到开发复杂度，我们使用3D Systems提供的Unity插件进行力反馈部分的开发。
 
-## Challenges
+## 挑战和问题
 
 * Unity中遇到帧率降低的问题
 * V1.2.0和V1.3.0 向量之间外积行为不一致
@@ -97,7 +97,7 @@ https://user-images.githubusercontent.com/6712304/205472730-f4fe9f03-d648-491d-b
 
 
 
-## Future Work
+## 未来工作
 
 * 丰富场景
   * 增加柔体、流体、绳子、布料的仿真
